@@ -1,15 +1,15 @@
 - name: Spin up EC2 instances to test STIGs
   ec2: 
     instance_type: t2.medium
-    vpc_subnet_id: "subnet-a2169ed5"
+    vpc_subnet_id: "subnet-ffc0b0d4"
     wait: yes
     region: "us-east-1"
     state: present
     assign_public_ip: yes
     image: "{{ item }}"
-    group_id: "sg-6f885c0b"
+    group_id: "sg-f210a695"
     count: 1
-    key_name: insecure-jdavila
+    key_name: superkey
     volumes:
       - device_name: /dev/xvda
         device_type: gp2
